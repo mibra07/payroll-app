@@ -1,3 +1,151 @@
+# Payroll Frontend Dashboard
+
+A React frontend dashboard for the Payroll API.
+
+# Features
+
+CSV upload
+Payroll summary table
+Filtering
+Sorting
+Pagination
+CSV export
+API integration
+
+# Tech Stack
+
+⚛️ React
+📡 Axios
+🎨 CSS
+⚡ Vite
+
+# Frontend Structure
+
+frontend/
+│
+├── src/
+│   ├── App.jsx
+│   ├── api.js
+│   ├── styles.css
+│   │
+│   └── components/
+│       ├── UploadForm.jsx
+│       └── SummaryTable.jsx
+│
+├── package.json
+└── README.md
+
+# Setup
+
+STEP 1 → Install Dependencies
+npm install
+STEP 2 → Install Axios
+npm install axios
+STEP 3 → Start Development Server
+npm run dev
+
+
+Frontend URL:
+http://localhost:5173
+
+# API Configuration
+
+Inside:src/api.js
+
+Set backend URL:
+baseURL: "http://localhost:8000"
+
+# Frontend Components
+
+UploadForm.jsx
+Handles:
+Config CSV upload
+Clock record CSV upload
+Error handling
+Loading states
+
+SummaryTable.jsx
+Handles:
+Payroll summary display
+Filters
+Sorting
+Pagination
+CSV download
+
+# Frontend Flow
+
+User Action
+    ↓
+React Component
+    ↓
+Axios API Request
+    ↓
+FastAPI Backend
+    ↓
+Database Response
+    ↓
+React UI Update
+
+
+# API Functions
+
+Upload File:
+uploadFile(url, file)
+Used for:
+/configs
+/clock-records
+
+Get Summary:
+getSummary(params)
+Used for:
+filtering
+sorting
+pagination
+
+Generate CSV URL:
+getCSVUrl(params)
+Used for:
+CSV export download
+
+# Debugging
+
+Browser Console
+console.log("API response:", response.data);
+
+# Network Tab
+
+Open: Chrome DevTools → Network
+Check:
+request URL
+query params
+API response
+CSV download
+
+# CSS Features
+
+Responsive layout
+Dashboard cards
+Styled table
+Hover effects
+Pagination controls
+Loading/error states
+
+# Concepts Covered
+
+React Hooks
+useState
+useEffect
+Axios
+Async/Await
+File Upload
+Controlled Components
+API Integration
+Pagination UI
+Conditional Rendering
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
